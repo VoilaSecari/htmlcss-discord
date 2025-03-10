@@ -8,6 +8,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 img {
@@ -17,11 +18,25 @@ img {
 a {
   text-decoration: none;
   color: white;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 ul {
   list-style-type: none;
   display: inline-block;
+}
+
+h2 {
+  font-size: 32px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+p {
+  line-height: 29px;
+  margin-bottom: 15px;
+  font-size: 16px;
 }
 
 /* Utils */
@@ -42,7 +57,8 @@ ul {
 }
 
 .container.container-xs {
-  max-width: 800px;
+  max-width: 600px;
+  min-height: 300px;
 }
 
 .row {
@@ -69,6 +85,22 @@ ul {
   width: 25%;
 }
 
+/* Bottoni */
+
+.btn {
+  padding: 7px 15px;
+  background-color: white;
+  color: black;
+  border: 1px solid transparent;
+  border-radius: 25px;
+}
+
+.btn.btn-hero {
+  font-size: 14px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
 /* header */
 
 .top-header {
@@ -76,25 +108,49 @@ ul {
 }
 
 .page-header {
+  background-image: url(../IMG/jumbo.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: fill;
+
   /* debug */
-  background-color: #26c6cc;
+  /* background-color: #26c6cc; */
+  /* border: 1px dashed red; */
 }
 
-.top-header > .container > .row > * {
+.logo-header {
+  display: inline;
+  margin-top: 8px;
+}
+
+.login-header {
+  text-align: right;
+}
+
+/* .top-header > .container > .row > * {
   flex-grow: 1;
-}
+} */
 
-.top-header .row > * {
+.top-header .row {
   padding: 10px;
-  background-color: goldenrod;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
 
   /* debug */
-  border: 2px dashed black;
+  /* border: 2px dashed black; */
 }
+
+/* .top-header .container {
+  height: 90px;
+  background-color: rgb(225, 129, 4);
+} */
 
 ul > li {
   text-align: center;
   display: inline;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .links-header {
@@ -104,14 +160,20 @@ ul > li {
 /* bottom header */
 
 .bottom-header {
-  background-color: blue;
-  padding: 75px 0;
+  padding: 20px 0;
+  min-height: 340px;
+  color: white;
+
+  /* debug */
+  /* background-color: blue; */
 }
 
-.bottom-header .hero {
+.hero {
   /* debug */
-  background-color: pink;
-  min-height: 300px;
+  /* background-color: pink; */
+  padding: 20px;
+  min-height: 200px;
+  text-align: center;
 }
 
 /* main */
