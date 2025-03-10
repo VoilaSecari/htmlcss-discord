@@ -16,10 +16,12 @@ img {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 ul {
   list-style-type: none;
+  display: inline-block;
 }
 
 /* Utils */
@@ -29,10 +31,156 @@ ul {
   min-height: 100px;
   padding: 5px;
   background-color: #ff000022;
+  border: 1px dashed red;
 }
 
 .container {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 10px;
+  width: 100%;
+}
+
+.container.container-xs {
+  max-width: 800px;
+}
+
+.row {
+  display: flex;
+}
+
+.col-60 {
+  width: 60%;
+}
+
+.col-40 {
+  width: 40%;
+}
+
+.col-30 {
+  width: 30%;
+}
+
+.col-70 {
+  width: 70%;
+}
+
+.col-25 {
+  width: 25%;
+}
+
+/* header */
+
+.top-header {
+  padding: 16px;
+}
+
+.page-header {
+  /* debug */
+  background-color: #26c6cc;
+}
+
+.top-header > .container > .row > * {
+  flex-grow: 1;
+}
+
+.top-header .row > * {
+  padding: 10px;
+  background-color: goldenrod;
+
+  /* debug */
+  border: 2px dashed black;
+}
+
+ul > li {
+  text-align: center;
+  display: inline;
+}
+
+.links-header {
+  text-align: center;
+}
+
+/* bottom header */
+
+.bottom-header {
+  background-color: blue;
+  padding: 75px 0;
+}
+
+.bottom-header .hero {
+  /* debug */
+  background-color: pink;
+  min-height: 300px;
+}
+
+/* main */
+
+.page-content > section {
+  padding: 50px 0;
+}
+
+.page-content > section:nth-child(odd) {
+  background-color: rgb(255, 255, 255);
+}
+
+.page-content > section:nth-child(even) {
+  background-color: gray;
+}
+
+.page-content > section:nth-child(even) .row {
+  flex-direction: row-reverse;
+}
+
+.page-content .col-40 {
+  /* debug */
+  min-height: 400px;
+  background-color: pink;
+}
+
+.page-content .col-60 {
+  /* debug */
+  min-height: 400px;
+  background-color: rgb(127, 187, 235);
+}
+
+.page-content .large-content {
+  /* debug */
+  background-color: green;
+  min-height: 600px;
+}
+
+/* page footer */
+
+.page-footer {
+  background-color: rgb(59, 59, 59);
+  padding: 10px 0;
+  color: white;
+}
+
+.page-footer .col-30 {
+  background-color: pink;
+}
+
+.page-footer .col-25 {
+  background-color: rgb(27, 133, 64);
+  border: 1px dashed black;
+}
+
+.page-footer .col-30,
+.page-footer .col-70,
+.page-footer .col-25 {
+  min-height: 300px;
+}
+
+.line-bottom {
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
